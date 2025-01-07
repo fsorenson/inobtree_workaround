@@ -1,7 +1,27 @@
 #!/bin/bash
 
-# Frank Sorenson <sorenson@redhat.com>, 2024
-# initial reproducer by Brian Foster <bfoster@redhat.com>
+# This script is free software: you can redistribute it and/or
+# modify it under the terms of the GNU General Public License as
+# published by the Free Software Foundation, either version 3 of
+# the License, or (at your option) any later version.
+
+# This script is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+# GNU General Public License for more details.
+
+# You should have received a copy of the GNU General Public
+# License along with this program. If not, see <https://www.gnu.org/licenses/>.
+
+# test_xfs_inobtrees - Frank Sorenson <sorenson@redhat.com>
+#   script to reproduce an XFS bug resulting in "Free Inode
+#   BTree record corruption in AG XX detected" errors and
+#   "Structure needs cleaning" (errno 117 - EUCLEAN) errors
+#   when attempting to create files or directories
+#
+#   The initial reproducer was created by Brian Foster <bfoster@redhat.com>
+#
+#   Frank Sorenson <sorenson@redhat.com>, 2024
 
 mp=/mnt/tmp
 img=/var/tmp/test.img

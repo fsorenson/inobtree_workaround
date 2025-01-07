@@ -1,5 +1,26 @@
 /*
-	Frank Sorenson <sorenson@redhat.com>, 2024
+	This program is free software: you can redistribute it and/or
+	modify it under the terms of the GNU General Public License as
+	published by the Free Software Foundation, either version 3 of
+	the License, or (at your option) any later version.
+
+	This program is distributed in the hope that it will be useful,
+	but WITHOUT ANY WARRANTY; without even the implied warranty of
+	MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+	GNU General Public License for more details.
+
+	You should have received a copy of the GNU General Public
+	License along with this program. If not, see <https://www.gnu.org/licenses/>.
+
+
+	This program is part of the userspace workaround for an XFS
+	bug resulting in "Free Inode BTree record corruption in AG XX
+	detected" errors and "Structure needs cleaning" (errno 117 -
+	EUCLEAN) errors when attempting to create files or directories
+
+
+	inobtree_workaround - Frank Sorenson <sorenson@redhat.com>, 2024
+
 
 	Interpose glibc functions which create filesystem objects (files, directories,
 	  special files, etc.) in order to work around Red Hat issue RHEL-62924:
